@@ -37,7 +37,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/fontawesome'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -50,6 +51,13 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
+
+  // fontawesome module
+  fontawesome: {
+    icons: {
+      solid: ['faFlask']
+    }
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/content-config)
   content: {},
