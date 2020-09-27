@@ -63,8 +63,8 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'Plane Game',
+          to: '/plane_game'
         }
       ],
       miniVariant: false,

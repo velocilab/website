@@ -8,20 +8,29 @@
         <v-card-text>
           <p>We are a collective of lifetime learners, building cool stuff.</p>
           <div class="text-xs-right">
-            <em><small>&mdash; Brock Wilcox (@awwaiid)</small></em>
+            <em><small>&mdash; <a href="https://thelackthereof.org/">Brock Wilcox (@awwaiid)</a></small></em>
           </div>
         </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
+      </v-card>
+    </v-col>
+    <v-col cols="12" sm="8" md="6">
+      <v-card>
+        <v-card-title class="headline">
+          {{ page.title }}
+        </v-card-title>
+        <v-card-text>
+          <nuxt-content :document="page" />
+        </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 </template>
+
+<script>
+export default {
+  async asyncData ({ $content }) {
+    const page = await $content('plane_game').fetch()
+    return { page }
+  }
+}
+</script>
